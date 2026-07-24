@@ -1,0 +1,181 @@
+/* Projects.css */
+
+.projects {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 6rem 1.5rem;
+    color: #a8b2d1;
+}
+
+.projects h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #e6e9ef;
+    margin-bottom: 2.5rem;
+
+    font-family: "Fira Code", "Courier New", monospace;
+}
+
+.projects h2::before {
+    content: "04.";
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
+
+.projects h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #2a2f3a;
+    margin-left: 0.5rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* card estilo "arquivo" */
+.project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    padding: 1.75rem;
+    background-color: #14171f;
+    border: 1px solid #2a2f3a;
+    border-radius: 6px;
+
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #9ca3af;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* iconezinho de "arquivo" no topo do card */
+.project-card::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 26px;
+    margin-bottom: 1.25rem;
+
+    background-color: transparent;
+    border: 1.5px solid #9ca3af;
+    border-radius: 3px;
+    opacity: 0.7;
+}
+
+.project-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #e6e9ef;
+    margin: 0 0 0.75rem;
+    font-family: "Fira Code", "Courier New", monospace;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #a8b2d1;
+    flex-grow: 1;
+    margin-bottom: 1.25rem;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.technologies span {
+    font-family: "Fira Code", "Courier New", monospace;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    background-color: rgba(156, 163, 175, 0.08);
+    border: 1px solid #2a2f3a;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-family: "Fira Code", "Courier New", monospace;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #a8b2d1;
+
+    padding: 0.4rem 0.85rem;
+    border: 1px solid #2a2f3a;
+    border-radius: 4px;
+
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-links a:hover {
+    color: #e6e9ef;
+    border-color: #9ca3af;
+}
+
+/* selo "em andamento" quando não tem demo */
+.project-links .in-progress {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-family: "Fira Code", "Courier New", monospace;
+    font-size: 0.8rem;
+    color: #6b7280;
+    padding: 0.4rem 0.85rem;
+}
+
+/* bolinha piscando */
+.project-links .in-progress::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #9ca3af;
+    animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.85);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        padding: 4rem 1.5rem;
+    }
+}

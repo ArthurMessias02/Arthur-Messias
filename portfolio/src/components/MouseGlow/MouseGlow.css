@@ -1,0 +1,16 @@
+/* MouseGlow.css */
+
+.mouse-glow {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background: radial-gradient(
+        600px circle at var(--x, 50%) var(--y, 50%),
+        rgba(156, 163, 175, 0.08),
+        transparent 70%
+    );
+
+    transition: background 0.1s ease-out;
+}

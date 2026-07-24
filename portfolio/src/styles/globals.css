@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+
+    color: white;
+
+    overflow-x: hidden;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: Inter, sans-serif;
+
+    overflow-x: hidden;
+
+}

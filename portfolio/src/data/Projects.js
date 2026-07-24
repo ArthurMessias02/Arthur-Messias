@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     title: "Journal PWA",
     description:
-      "Aplicação de gerenciamento de tarefas desenvolvida em React com suporte a Progressive Web App. O projeto foi otimizado para oferecer uma experiência rápida, leve e funcional, incluindo funcionamento offline.",
+      "A task management application developed in React with support for Progressive Web App. The project was optimized to provide a fast, lightweight and functional experience, including offline functionality.",
 
     technologies: [
       "React",
@@ -22,7 +22,7 @@ const projects = [
     id: 2,
     title: "Restaurant Micro Frontends",
     description:
-      "Aplicação dividida em Micro Frontends utilizando React e Webpack Module Federation. O projeto demonstra comunicação entre aplicações independentes através de Custom Events.",
+      "An application split into Micro Frontends using React and Webpack Module Federation. The project demonstrates communication between independent applications via Custom Events.",
 
     technologies: [
       "React",

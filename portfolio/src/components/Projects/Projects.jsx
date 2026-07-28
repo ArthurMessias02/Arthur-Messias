@@ -9,6 +9,11 @@ function Projects() {
       <div className="projects-container">
         {projects.map((project) => (
           <article className="project-card" key={project.id}>
+             {project.image && (
+        <div className="project-image">
+            <img src={project.image} alt={`Preview do projeto ${project.title}`} />
+        </div>
+    )}
             <h3>{project.title}</h3>
 
             <p>{project.description}</p>

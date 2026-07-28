@@ -14,6 +14,7 @@ const projects = [
 
     github: "https://github.com/ArthurMessias02/pwa-journal-app--performace",
     demo: "https://pwa-journal-app-performace.vercel.app/",
+    image: "/Projects/PWA Diario de Bordo.png",
 
     featured: true
   },
@@ -33,6 +34,7 @@ const projects = [
 
     github: "https://github.com/ArthurMessias02/micro-frontends-food",
     demo: "",
+    image: "/projects/micro-frontends.png",
 
     featured: true
   }

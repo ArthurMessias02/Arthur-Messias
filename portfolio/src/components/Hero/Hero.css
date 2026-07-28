@@ -129,6 +129,13 @@
     color: #9ca3af;
 }
 
+@media (max-width: 900px) {
+    #hero {
+        min-height: calc(100vh - 70px); /* desconta altura da navbar horizontal */
+        padding-top: 2rem;
+    }
+}
+
 @media (max-width: 600px) {
     #hero {
         padding: 0 1rem;
@@ -136,5 +143,15 @@
 
     #hero .description {
         font-size: 1rem;
+    }
+
+    #hero div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #hero div a {
+        width: 100%;
+        text-align: center;
     }
 }

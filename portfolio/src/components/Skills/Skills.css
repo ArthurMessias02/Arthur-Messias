@@ -75,11 +75,11 @@
 }
 
 @media (max-width: 600px) {
-    #skills ul {
-        grid-template-columns: 1fr;
+    #skills {
+        padding: 3rem 1.25rem;
     }
 
-    #skills {
-        padding: 4rem 1.5rem;
+    #skills h2 {
+        font-size: 1.4rem;
     }
 }

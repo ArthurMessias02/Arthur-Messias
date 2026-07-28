@@ -57,8 +57,16 @@
     color: #e6e9ef;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     #about {
-        padding: 4rem 1.5rem;
+        padding: 3rem 1.25rem;
+    }
+
+    #about h2 {
+        font-size: 1.4rem;
+    }
+
+    #about blockquote {
+        padding: 1rem 1.1rem;
     }
 }

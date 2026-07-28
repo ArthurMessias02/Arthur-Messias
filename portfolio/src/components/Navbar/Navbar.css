@@ -128,3 +128,13 @@ header {
 .nav-links a.active::before {
     color: #e6e9ef;
 }
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+}

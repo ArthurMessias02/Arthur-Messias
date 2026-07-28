@@ -66,11 +66,14 @@
 
 @media (max-width: 600px) {
     .contact {
-        padding: 5rem 1.5rem 4rem;
+        padding: 3rem 1.25rem 3rem;
     }
 
-    .contact ul {
-        flex-wrap: wrap;
-        justify-content: center;
+    .contact h3 {
+        font-size: 1.75rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
     }
 }

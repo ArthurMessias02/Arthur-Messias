@@ -171,12 +171,16 @@
 }
 
 @media (max-width: 600px) {
-    .projects-container {
-        grid-template-columns: 1fr;
+    .projects {
+        padding: 3rem 1.25rem;
     }
 
-    .projects {
-        padding: 4rem 1.5rem;
+    .projects h2 {
+        font-size: 1.4rem;
+    }
+
+    .project-card {
+        padding: 1.25rem;
     }
 }
 .project-image {

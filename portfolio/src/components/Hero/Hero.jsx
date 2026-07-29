@@ -20,7 +20,7 @@ function Hero() {
             <div>
                 <a href="#projects">View Projects</a>
                 <a
-                    href="https://github.com/..."
+                    href="https://github.com/ArthurMessias02"
                     target="_blank"
                     rel="noreferrer"
                 >

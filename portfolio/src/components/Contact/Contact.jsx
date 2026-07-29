@@ -1,8 +1,10 @@
 import "./Contact.css";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 function Contact() {
+   const [ref, isVisible] = useScrollReveal();
   return (
-    <section id="contact" className="contact">
+    <section id="contact" ref={ref} className={`contact reveal ${isVisible ? "visible" : ""}`}>
       <h2>04. What's Next?</h2>
       <h3>Get In Touch</h3>
 

@@ -1,9 +1,13 @@
 // About.jsx
 import "./About.css";
+import "./About.css";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
+
 
 function About() {
+     const [ref, isVisible] = useScrollReveal();
     return (
-        <section id="about">
+        <section id="about" ref={ref} className={`reveal ${isVisible ? "visible" : ""}`}>
             <h2>About Me</h2>
 
             <div className="about-content">

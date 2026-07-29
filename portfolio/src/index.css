@@ -119,3 +119,19 @@ code {
         margin-left: 0;
     }
 }
+/* efeito de revelar ao rolar */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* delay escalonado pros filhos, quando quiser efeito em cascata */
+.reveal.visible > * {
+    animation: none; /* garante que não conflita com outras animações */
+}

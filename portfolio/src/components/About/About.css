@@ -1,7 +1,7 @@
 /* About.css */
 
 #about {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 6rem 1.5rem;
     color: #a8b2d1;
@@ -20,14 +20,12 @@
     font-family: "Fira Code", "Courier New", monospace;
 }
 
-/* numerozinho tipo "02." antes do título, no mesmo espírito da navbar */
 #about h2::before {
     content: "02.";
     color: #9ca3af;
     font-size: 1.1rem;
 }
 
-/* linha decorativa depois do título, esticando até o fim da seção */
 #about h2::after {
     content: "";
     flex: 1;
@@ -36,13 +34,21 @@
     margin-left: 0.5rem;
 }
 
-#about p {
+/* grid: texto + foto lado a lado */
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.about-text p {
     font-size: 1.05rem;
     line-height: 1.75;
     margin-bottom: 1.25rem;
 }
 
-#about blockquote {
+.about-text blockquote {
     position: relative;
     margin: 2.5rem 0 0;
     padding: 1.25rem 1.5rem;
@@ -57,6 +63,55 @@
     color: #e6e9ef;
 }
 
+/* foto */
+.about-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #2a2f3a;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* leve dessaturação, ajuda a integrar com o tema escuro */
+    filter: grayscale(20%) contrast(1.05);
+    transition: filter 0.3s ease;
+}
+
+.about-photo:hover img {
+    filter: grayscale(0%) contrast(1.05);
+}
+
+/* moldura decorativa atrás da foto, no estilo "código" */
+.about-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    transform: translate(8px, 8px);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+        max-width: 280px;
+        margin: 0 auto;
+        order: -1; /* foto aparece antes do texto no mobile */
+    }
+}
+
 @media (max-width: 600px) {
     #about {
         padding: 3rem 1.25rem;
@@ -64,9 +119,5 @@
 
     #about h2 {
         font-size: 1.4rem;
-    }
-
-    #about blockquote {
-        padding: 1rem 1.1rem;
     }
 }

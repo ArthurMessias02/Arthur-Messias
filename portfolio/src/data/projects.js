@@ -34,7 +34,7 @@ const projects = [
 
     github: "https://github.com/ArthurMessias02/micro-frontends-food",
     demo: "",
-    image: "/projects/micro-frontends.png",
+    image: "/Projects/restaurant-microfrontends.png",
 
     featured: true
   }
